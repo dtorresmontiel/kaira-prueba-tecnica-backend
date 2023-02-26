@@ -25,7 +25,7 @@
         "psr-4": {
             "App\\": "app/",
             "Domain\\": "domain/",
-            "Infrastructure\\": "infrastructure/",
+            "Infrastructure\\": "infrastructure/app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
         }

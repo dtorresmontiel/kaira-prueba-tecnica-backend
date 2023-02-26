@@ -72,13 +72,13 @@ class BalancedBracketsTokenValidator implements TokenValidator
 
     private static function isMatchingClosure(string $char, array $stack): bool
     {
-        $last = array_pop($stack);
-        return self::isClosure($char) && $last && ($char === self::COUPLES[$last]);
+        $lastOpener = array_pop($stack);
+        return self::isClosure($char) && $lastOpener && ($char === self::COUPLES[$lastOpener]);
     }
 
     private static function isNotMatchingClosure(string $char, array $stack): bool
     {
-        $last = array_pop($stack);
-        return self::isClosure($char) && $last && ($char !== self::COUPLES[$last]);
+        $lastOpener = array_pop($stack);
+        return self::isClosure($char) && $lastOpener && ($char !== self::COUPLES[$lastOpener]);
     }
 }
